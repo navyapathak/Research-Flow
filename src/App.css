@@ -1,0 +1,74 @@
+/* Application Component Styles & Responsive Rules */
+
+.workspace-splitter:hover {
+  background-color: var(--primary) !important;
+}
+
+.spin-animation {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.session-row-item:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.session-title-hover:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.document-card-item:hover {
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+.citation-card-hover:hover {
+  background-color: rgba(99, 102, 241, 0.15) !important;
+  border-color: var(--primary) !important;
+  transform: translateX(2px);
+}
+
+.session-card-item:hover {
+  border-color: rgba(99, 102, 241, 0.35) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Mobile & Tablet Responsive Breakpoints */
+@media (max-width: 900px) {
+  .mobile-pane-toggle {
+    display: flex !important;
+  }
+
+  .workspace-splitter {
+    display: none !important;
+  }
+
+  .workspace-panel {
+    width: 100% !important;
+    display: none !important;
+  }
+
+  .workspace-panel.mobile-active {
+    display: flex !important;
+  }
+}
